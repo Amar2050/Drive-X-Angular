@@ -7,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarsListComponent implements OnInit {
 
+  //Je déclare une variable de type string et je la type
+
+  test:string = "Ceci est un texte";
+
+  unNombre:number= 21;
+
+
   constructor() { }
 
   ngOnInit(): void {
