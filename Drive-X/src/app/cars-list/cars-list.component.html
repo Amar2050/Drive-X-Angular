@@ -9,19 +9,17 @@
 
     <p class="font-weight-bold">Donnée de la Classe vers le Template</p>
 
-    <p>Exemple 2  la propriété disabled d'une balise button </p>
+    <p>Exemple 3  la propriété value d'une balise input </p>
 
-    <!-- la propriété src de ma balise image est lié (binding) a la variable uneImage -->
+    <!-- la propriété value de ma balise input associé au principe 
+        du property binding permet d'hydrater un formulaire par exemple -->
 
     <div class="col-6">
-        <h3>Morty Paduk</h3>
-        <img [src]="uneImage" >
-
-        <p>Désolé cette article n'est plus en stock</p>
-        <!-- La possibilité de cliquer le button est lié a la variable dans la classe 
-             On aurait pu mettre le retour d'une méthode  -->
-        <button class="btn btn-success" [disabled]="isButtonDisabled">Commandez</button>
-
+        <h3>Modification de profil</h3>
+        <form class="form-group" >
+            <label  for="name">Prénom</label>
+            <input class="form-control" id="name" type="text" [value]="getFirstname()">
+        </form>
     </div>
 
 
