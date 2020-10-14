@@ -11,6 +11,8 @@ export class CarsListComponent implements OnInit {
   // et definis ma variable uneImage
   uneImage:string= "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS36JfuWE1Cr8skNvMG8-XzDVesPMJs1Hjciw&usqp=CAU";
 
+  // active ou non le bouton selon la condition qui sera a définir plus tard
+  isButtonDisabled:boolean = true;
   constructor() { }
 
   ngOnInit(): void {

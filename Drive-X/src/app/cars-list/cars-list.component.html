@@ -9,13 +9,19 @@
 
     <p class="font-weight-bold">Donnée de la Classe vers le Template</p>
 
-    <p>Exemple 1  la propriété src d'une balise image </p>
+    <p>Exemple 2  la propriété disabled d'une balise button </p>
 
     <!-- la propriété src de ma balise image est lié (binding) a la variable uneImage -->
 
     <div class="col-6">
         <h3>Morty Paduk</h3>
         <img [src]="uneImage" >
+
+        <p>Désolé cette article n'est plus en stock</p>
+        <!-- La possibilité de cliquer le button est lié a la variable dans la classe 
+             On aurait pu mettre le retour d'une méthode  -->
+        <button class="btn btn-success" [disabled]="isButtonDisabled">Commandez</button>
+
     </div>
 
 
