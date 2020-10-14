@@ -7,12 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarsListComponent implements OnInit {
 
-  //Je déclare un objet de type any car il n'a pas encore de model
+  //Je déclare une variable de type number 
+  //qui correspond a un stock de produit 
 
-  game:any = {
-    title:"Battlefield 3",
-    support: "PC",
-    multi: 64
+  stock:number = 19;
+
+  //Je crée une méthode simple qui me retourne le stock
+  
+  getStock(){
+    return this.stock;
   }
 
   constructor() { }

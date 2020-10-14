@@ -9,17 +9,11 @@
 
     <p class="font-weight-bold">Donnée de la Classe vers le Template</p>
 
-    <p>Exemple 2 objet simple</p>
+    <p>Exemple 3  méthode en string interpolation </p>
 
-    <!-- Je ne peux pas afficher l'objet directement sans voir d'autres notions -->
-    <p>{{ game }}</p>
-    
-    <!-- J'affiche les propriétés de mon objet  -->
-    <div class="border border-info  col-3">
-        <p>Titre: {{ game.title }}</p>
-        <p>Plateforme: {{ game.support }}</p>
-        <p>Multi: {{ game.multi }} joueur(s)</p>
-    </div>
-    
+    <!-- En string interpolation je peux afficher le 
+        resultat d'une méthode (function) de la classe -->
+
+    <p>Il reste {{ getStock() }} article(s) en stock</p>
 
 </div>
