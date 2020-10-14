@@ -7,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarsListComponent implements OnInit {
 
-  // L'utilisateur est connécté on récupére son prénom via cette méthode
-  getFirstname(){
-    return "Saladin";
-  }
+  // Je déclare 3 variables qui represente ma liste de véhicule
+  // Ces données vont etre envoyées aux components enfants 
+  vehiculeUn:string = "Mercedes AMG";
+  vehiculeDeux:string ="Range Rover Evoque";
+  vehiculeTrois:string ="Ferrari F50";
 
   constructor() { }
 
