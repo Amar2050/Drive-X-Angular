@@ -8,6 +8,7 @@ import { CarsListComponent } from './cars-list/cars-list.component';
 import { DriversListComponent } from './drivers-list/drivers-list.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { FourOhfourComponent } from './four-ohfour/four-ohfour.component';
+import { CarItemComponent } from './cars-list/car-item/car-item.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FourOhfourComponent } from './four-ohfour/four-ohfour.component';
     CarsListComponent,
     DriversListComponent,
     HomePageComponent,
-    FourOhfourComponent
+    FourOhfourComponent,
+    CarItemComponent
   ],
   imports: [
     BrowserModule,
