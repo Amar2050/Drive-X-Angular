@@ -9,11 +9,17 @@
 
     <p class="font-weight-bold">Donnée de la Classe vers le Template</p>
 
-    <p>Exemple 1 variable simple</p>
+    <p>Exemple 2 objet simple</p>
 
-    <!-- J'affiche ma variable  dans la vue en string interpolation -->
-    <p>{{ test }}</p>
-    <!-- Toujours en string interpolation mais un nombre -->
-    <p>J'ai {{  unNombre }} ans</p>
+    <!-- Je ne peux pas afficher l'objet directement sans voir d'autres notions -->
+    <p>{{ game }}</p>
+    
+    <!-- J'affiche les propriétés de mon objet  -->
+    <div class="border border-info  col-3">
+        <p>Titre: {{ game.title }}</p>
+        <p>Plateforme: {{ game.support }}</p>
+        <p>Multi: {{ game.multi }} joueur(s)</p>
+    </div>
+    
 
 </div>

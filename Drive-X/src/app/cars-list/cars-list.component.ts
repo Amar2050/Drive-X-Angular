@@ -7,12 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarsListComponent implements OnInit {
 
-  //Je déclare une variable de type string et je la type
+  //Je déclare un objet de type any car il n'a pas encore de model
 
-  test:string = "Ceci est un texte";
-
-  unNombre:number= 21;
-
+  game:any = {
+    title:"Battlefield 3",
+    support: "PC",
+    multi: 64
+  }
 
   constructor() { }
 
