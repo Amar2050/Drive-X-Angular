@@ -4,19 +4,11 @@
 
 <div class="container">
 
-    <h2>CUSTOM PROPERTY BINDING & Décorateur @Input</h2>
-
-    <p class="font-weight-bold">Donnée de la Classe Parent vers le Template Enfant</p>
-
-    <!-- Je nest (imbrique) les components voulues et je créer une propriété custom vehicule 
-        qui n'est ni src value disabled ou autres propriétés html existantes d'où le custom property
-        et je fais un classic property binding en liant ma custom property a une variable de la classe
-        lié a ce component afin d'envoyé cette variable DANS le component imbriquer (utiliser) grace à 
-        ça et au décorateur @Input() dans l'enfant (le récepteur)  -->
-        
-    <app-car-item [vehicule]="vehiculeUn"></app-car-item>
-    <app-car-item [vehicule]="vehiculeDeux"></app-car-item>
-    <app-car-item [vehicule]="vehiculeTrois"></app-car-item>
+    <div class="row">
+        <app-car-item [vehicule]="vehiculeUn"></app-car-item>
+        <app-car-item [vehicule]="vehiculeDeux"></app-car-item>
+        <app-car-item [vehicule]="vehiculeTrois"></app-car-item>
+    </div>
 
 
 </div>

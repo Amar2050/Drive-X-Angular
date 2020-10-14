@@ -9,7 +9,7 @@ export class CarItemComponent implements OnInit {
   
   // Dans la classe Enfant je récupére la donnée de la classe Parent
   //Le décorateur @Input() me permet de récuperer une donnée depuis une autre classe
-  @Input()vehicule:string;
+  @Input()vehicule:any;
 
   constructor() { }
 

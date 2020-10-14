@@ -7,11 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarsListComponent implements OnInit {
 
-  // Je déclare 3 variables qui represente ma liste de véhicule
-  // Ces données vont etre envoyées aux components enfants 
-  vehiculeUn:string = "Mercedes AMG";
-  vehiculeDeux:string ="Range Rover Evoque";
-  vehiculeTrois:string ="Ferrari F50";
+
+  vehiculeUn:any =
+  {
+    title: "Mercedes AMG",
+    price: 42000 
+  } 
+
+  vehiculeDeux:any =
+  {
+    title: "Range Rover Evoque",
+    price: 55000
+  }
+
+  vehiculeTrois:any =
+  {
+    title: "Ferrari F50",
+    price: 350000
+  }
 
   constructor() { }
 
