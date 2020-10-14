@@ -7,19 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarsListComponent implements OnInit {
 
-  //Je déclare une variable de type number 
-  //qui correspond a un stock de produit 
-
-  stock:number = 19;
-
-  //Prix de base sans réduction
-  prix:number = 100;
-
-  //Je crée une méthode simple qui me retourne le stock
-
-  getStock(){
-    return this.stock;
-  }
+  // Dans google image je fais un clic droit "copier l'adresse de l'image" 
+  // et definis ma variable uneImage
+  uneImage:string= "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS36JfuWE1Cr8skNvMG8-XzDVesPMJs1Hjciw&usqp=CAU";
 
   constructor() { }
 

@@ -5,17 +5,18 @@
 
 <div class="container">
 
-    <h2>STRING INTERPOLATION</h2>
+    <h2>PROPERTY BINDING</h2>
 
     <p class="font-weight-bold">Donnée de la Classe vers le Template</p>
 
-    <p>Exemple 3  méthode en string interpolation </p>
+    <p>Exemple 1  la propriété src d'une balise image </p>
 
-    <!-- En string interpolation je peux appliquer des traitements depuis le Template -->
+    <!-- la propriété src de ma balise image est lié (binding) a la variable uneImage -->
 
-    <p>Il reste {{ getStock() -1 }} article(s) en stock</p>
+    <div class="col-6">
+        <h3>Morty Paduk</h3>
+        <img [src]="uneImage" >
+    </div>
 
-    <!-- D'autres traitements sont possibles consuler la doc Angular -->
-    <p>Promo de 20% ! <br> {{ prix * 0.8 }}  &euro; au lieu de {{ prix }} &euro;</p>
 
 </div>
