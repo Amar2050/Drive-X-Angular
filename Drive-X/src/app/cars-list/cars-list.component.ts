@@ -12,8 +12,11 @@ export class CarsListComponent implements OnInit {
 
   stock:number = 19;
 
+  //Prix de base sans réduction
+  prix:number = 100;
+
   //Je crée une méthode simple qui me retourne le stock
-  
+
   getStock(){
     return this.stock;
   }

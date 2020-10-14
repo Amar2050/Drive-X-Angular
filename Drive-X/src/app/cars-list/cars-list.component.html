@@ -11,9 +11,11 @@
 
     <p>Exemple 3  méthode en string interpolation </p>
 
-    <!-- En string interpolation je peux afficher le 
-        resultat d'une méthode (function) de la classe -->
+    <!-- En string interpolation je peux appliquer des traitements depuis le Template -->
 
-    <p>Il reste {{ getStock() }} article(s) en stock</p>
+    <p>Il reste {{ getStock() -1 }} article(s) en stock</p>
+
+    <!-- D'autres traitements sont possibles consuler la doc Angular -->
+    <p>Promo de 20% ! <br> {{ prix * 0.8 }}  &euro; au lieu de {{ prix }} &euro;</p>
 
 </div>
