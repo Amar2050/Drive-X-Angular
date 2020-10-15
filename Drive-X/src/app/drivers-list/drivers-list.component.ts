@@ -6,17 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./drivers-list.component.css']
 })
 export class DriversListComponent implements OnInit {
-
+  
+  imgUrl:string;
+  
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  // Ma méthode prend en parametre une variable de type string et l'affiche dans un console log
-  // La variable inputValue viens de mon champs input via la reference locale et donner en param 
-  // A ma méthode ici présente , je fais un console log pour faire simple 
+  // On recupere la valeur de l'input pour la stocker dans une variable 
+  // via property binding on utilise cette variable pour notre image 
   onButtonClick(inputValue:string){
-    console.log(inputValue);
+    
+    this.imgUrl = inputValue;
+
+    return this.imgUrl;
   }
 
 }
