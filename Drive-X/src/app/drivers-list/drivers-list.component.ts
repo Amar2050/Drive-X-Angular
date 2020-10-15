@@ -12,10 +12,9 @@ export class DriversListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // Je crée une simple méthode qui déclenche une alert JS classique
-  // le term on est une convention pour un evénement onMouseScroll ect ect
-  onButtonClick(){
-    alert("Yes les events c'est mieux comme ça !");
+  // La méthode créer peut faire n'importe quoi et etre lié a tout type d'event JS
+  onMouseOver(){
+    console.log("En effet c'est tout simple");
   }
 
 }

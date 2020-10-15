@@ -8,16 +8,11 @@
 
     <p class="font-weight-bold">Intéraction du Template vers la Classe</p>
 
-    <p>Exemple 1</p>
+    <p>Exemple 2</p>
 
-    <!-- Je crée un button classique html et je met entre parenthése 
-         tout evenement Js sans le on genre onclick / juste click scroll ect 
-         Puis je lie cette event a ma méthode dans ma classe 
-         L'evenement dans le template va déclencher une réaction dans la classe
-         D'où le fait qu'on dit que le Event Binding va du template a la classe
-         Au contraire du string interpolation par exemple -->
+    <!-- Meme principe que exemple 1 mais avec un mouseover -->
 
-    <button class="btn btn-success" (click)="onButtonClick()">Clic Ici !</button>
+    <h2 class="bg-danger w-50" (mouseover)="onMouseOver()">Survolez Moi !</h2>
 
 
 </div> 
