@@ -7,20 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DriversListComponent implements OnInit {
   
-  imgUrl:string;
-  
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  // On recupere la valeur de l'input pour la stocker dans une variable 
-  // via property binding on utilise cette variable pour notre image 
-  onButtonClick(inputValue:string){
-    
-    this.imgUrl = inputValue;
-
-    return this.imgUrl;
-  }
 
 }

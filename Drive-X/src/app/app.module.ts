@@ -9,6 +9,7 @@ import { DriversListComponent } from './drivers-list/drivers-list.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { FourOhfourComponent } from './four-ohfour/four-ohfour.component';
 import { CarItemComponent } from './cars-list/car-item/car-item.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CarItemComponent } from './cars-list/car-item/car-item.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
