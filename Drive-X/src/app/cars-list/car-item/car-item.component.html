@@ -1,6 +1,7 @@
-<p>{{car.name}}</p>
-<p>Origine: {{car.pays}}</p>
-<p>{{car.power}} CH</p>
-<p>0 à 100 km/h: {{car.perf}} sec</p>
+<p>{{car.name | titlecase}}</p>
+<p>Origine: {{car.pays | uppercase}}</p>
+<p>{{car.power }} CH</p>
+<p>0 à 100 km/h: {{car.perf}} <span *ngIf="car.perf == null ">NC</span> sec</p>
+<p>{{bookingMessage}}</p>
+<button class="btn btn-primary" (click)="onBooking()" [disabled]="isBooked">Réserver</button>
 <hr>
-
