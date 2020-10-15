@@ -10,3 +10,15 @@
         <a class="btn btn-primary btn-lg" routerLink="cars" role="button">eXotic Cars</a>
     </p>
 </div>
+
+
+<h2>Two Way Binding</h2>
+
+<p class="font-weight-bold">Intéraction entre Template et la Classe en meme temps</p>
+
+
+<!-- ici les données sont relié dynamiquement dans les deux sens
+     Certains application web utilise ce procédé pour des formulaires dynamique -->
+<input type="text" [(ngModel)]=username>
+<!-- On utilise le string interpolation aussi -->
+<h3>Nom: {{username}}</h3>
