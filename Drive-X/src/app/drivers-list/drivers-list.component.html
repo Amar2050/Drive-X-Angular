@@ -8,11 +8,19 @@
 
     <p class="font-weight-bold">Intéraction du Template vers la Classe</p>
 
-    <p>Exemple 2</p>
+    <p>Exemple 3</p>
 
-    <!-- Meme principe que exemple 1 mais avec un mouseover -->
+    <!-- L'idée est de recuperer le contenu du input a l'aide du bouton et d'un event 
+         Je créer un input et une réference locale (cible un element du dom) avec le # 
+         et n'importe quelle mot ici input pour dire que l'element est un input
+         Dans un input je sais qu'il existe la propriété value et c'est ce que je veux
+         Grace a la reference locale je peux recuperer la value et la donner en param a ma méthode
+         Ma méthode (dans ma classe) va pouvoir utiliser cette donnée pour mon console log  -->
 
-    <h2 class="bg-danger w-50" (mouseover)="onMouseOver()">Survolez Moi !</h2>
+
+    <input type="text" #input>
+    <br>
+    <button class="btn btn-info" (click)="onButtonClick(input.value)">Envoyer</button>
 
 
 </div> 

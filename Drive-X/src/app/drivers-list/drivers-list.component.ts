@@ -12,9 +12,11 @@ export class DriversListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // La méthode créer peut faire n'importe quoi et etre lié a tout type d'event JS
-  onMouseOver(){
-    console.log("En effet c'est tout simple");
+  // Ma méthode prend en parametre une variable de type string et l'affiche dans un console log
+  // La variable inputValue viens de mon champs input via la reference locale et donner en param 
+  // A ma méthode ici présente , je fais un console log pour faire simple 
+  onButtonClick(inputValue:string){
+    console.log(inputValue);
   }
 
 }
