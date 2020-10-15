@@ -2,7 +2,7 @@
     Nos Vehicules
 </h1>
 
-<div class="badge badge-dark my-5">Données mise à jour: {{ carUpdate }}</div>
+<div class="badge badge-dark my-5">Données mise à jour: {{ carUpdate | date:"dd MMMM yyyy H:mm" | uppercase }}</div>
 
     <app-car-item [car]="carOne"></app-car-item>
     <app-car-item [car]="carTwo"></app-car-item>
