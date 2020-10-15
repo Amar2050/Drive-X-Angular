@@ -1,3 +1,23 @@
 <h1 class="my-5">
     Nos Pilotes
 </h1>
+
+<div class="container">
+
+    <h2>Event Binding</h2>
+
+    <p class="font-weight-bold">Intéraction du Template vers la Classe</p>
+
+    <p>Exemple 1</p>
+
+    <!-- Je crée un button classique html et je met entre parenthése 
+         tout evenement Js sans le on genre onclick / juste click scroll ect 
+         Puis je lie cette event a ma méthode dans ma classe 
+         L'evenement dans le template va déclencher une réaction dans la classe
+         D'où le fait qu'on dit que le Event Binding va du template a la classe
+         Au contraire du string interpolation par exemple -->
+
+    <button class="btn btn-success" (click)="onButtonClick()">Clic Ici !</button>
+
+
+</div> 
