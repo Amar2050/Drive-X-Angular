@@ -4,16 +4,17 @@
 
 <p class="h3 my-3">Directive Attribut - [ngClass]</p>
 
-<p class="font-weight-bold">Exemple 1</p>
-
-<!-- ngClass fonctionne presque comme ngStyle sauf qu'il concerne les classes css    -->
-
-<p [ngClass]="{'text-center': true}">Un texte centrer avec ngClass</p>
+<p class="font-weight-bold">Exemple 2</p>
 
 
-<!-- Ici selon le stock je fais varié la couleur du badge, il faut changer le stock 
-     dans la classe pour constater le réaction du template -->
+<!-- Simulation d'un éditeur de texte en Angular  -->
+
+<p [ngClass]="{'text-center':isCentred}"> Un texte centrer avec ngClass + event binding + ngIf ! </p>
+
+<!-- Au clic la propriété isCentred deviens true ou false , on change donc le texte du boutton
+     et centre ou non notre texte à l'aide de la directive d'attribut ngClass    -->
      
-<p [ngClass]="{'badge':true, 'badge-success': stock >= 1, 
-               'badge-danger': stock <= 0 }">
-               {{ stock }} article(s) en stock </p>
+<button (click)="onClick()"> 
+         <span *ngIf="!isCentred">Centrer le texte</span>
+         <span *ngIf="isCentred">Ne pas centrer</span>
+</button>
