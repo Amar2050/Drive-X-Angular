@@ -2,19 +2,3 @@
     Nos Pilotes
 </h1>
 
-<p class="h3 my-3">Directive Attribut - [ngClass]</p>
-
-<p class="font-weight-bold">Exemple 2</p>
-
-
-<!-- Simulation d'un éditeur de texte en Angular  -->
-
-<p [ngClass]="{'text-center':isCentred}"> Un texte centrer avec ngClass + event binding + ngIf ! </p>
-
-<!-- Au clic la propriété isCentred deviens true ou false , on change donc le texte du boutton
-     et centre ou non notre texte à l'aide de la directive d'attribut ngClass    -->
-     
-<button (click)="onClick()"> 
-         <span *ngIf="!isCentred">Centrer le texte</span>
-         <span *ngIf="isCentred">Ne pas centrer</span>
-</button>
