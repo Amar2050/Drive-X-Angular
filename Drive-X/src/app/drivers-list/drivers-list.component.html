@@ -2,14 +2,18 @@
     Nos Pilotes
 </h1>
 
-<p class="h3 my-3">Directive Attribut - [ngStyle]</p>
+<p class="h3 my-3">Directive Attribut - [ngClass]</p>
 
 <p class="font-weight-bold">Exemple 1</p>
 
-<!-- ngStyle prend en parametre un objet et permet d'appliquer plusieurs propriété css en meme temps   -->
+<!-- ngClass fonctionne presque comme ngStyle sauf qu'il concerne les classes css    -->
 
-<p [ngStyle]="{color:'gold',margin:'30px',padding:'50px'}">ngStyle avec plusieurs propriétés css en dur !</p>
-
-<p [ngStyle]="{color:getColor(),margin:uneMarge,padding:'50px'}">NgStyle plusieurs propriété css dynamiques depuis la class</p>
+<p [ngClass]="{'text-center': true}">Un texte centrer avec ngClass</p>
 
 
+<!-- Ici selon le stock je fais varié la couleur du badge, il faut changer le stock 
+     dans la classe pour constater le réaction du template -->
+     
+<p [ngClass]="{'badge':true, 'badge-success': stock >= 1, 
+               'badge-danger': stock <= 0 }">
+               {{ stock }} article(s) en stock </p>

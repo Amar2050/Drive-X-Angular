@@ -7,15 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DriversListComponent implements OnInit {
   
- // Je définis une marge
-  uneMarge:string = "-110px";
-
-  // NgStyle me permet d'utiliser plusieurs variables ou méthodes pour un seul element du dom
-  getColor(){
-    return "aqua";
-  }
-
-
+  stock:number =1;
 
   constructor() { }
 
