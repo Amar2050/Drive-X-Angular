@@ -2,18 +2,28 @@
     Nos Pilotes
 </h1>
 
-<p class="h3 my-3">Directive structurelle</p>
+<p class="h3 my-3">Directive structurelle - ngFor</p>
 
-<p class="font-weight-bold">Exemple 2</p>
+<p class="font-weight-bold">Exemple 1</p>
 
+<!-- La directive ngFor me permet de boucler sur le tableau et repeter un 
+     element du dom autant de fois que d'entrée dans le tableau -->
 
-<!-- Je réagis en modifiant la structure du dom
-     selon la donnée reçu ou non par une eventuelle bdd   -->
-
-<p>Titre: {{book.title}}</p>
-<p>Prix: 
-    <span *ngIf="book.price">{{book.price}} &euro;</span>
-    <span *ngIf="book.price == null" >Non communiqué</span>
-    
+<p  *ngFor="let fruit of fruits">
+    {{ fruit }}
 </p>
 
+<p class="font-weight-bold">Afficher l'index</p>
+
+<!-- Je peux déclarer une deuxieme variable index pour l'afficher ou l'utiliser -->
+<p class="card col-2 text-center shadow" *ngFor="let fruit of fruits; let i = index ">
+    {{ i }} - {{ fruit }}
+</p>
+
+<p class="font-weight-bold">Jouer avec l'index, ngFor et ngIf</p>
+
+<p class="card col-3 text-center shadow" *ngFor="let fruit of fruits; let i = index ">
+    
+    <span *ngIf=" i %2 == 0"> {{fruit}} est un Fizz </span>
+    <span *ngIf=" i %2 == 1"> {{fruit}} est une Bouze</span>
+</p>
