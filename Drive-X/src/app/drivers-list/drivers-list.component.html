@@ -2,28 +2,19 @@
     Nos Pilotes
 </h1>
 
-<p class="h3 my-3">Directive structurelle - ngFor</p>
+<p class="h3 my-3">Directive Attribut - [style.propriété] & [ngStyle]</p>
 
 <p class="font-weight-bold">Exemple 1</p>
 
-<!-- La directive ngFor me permet de boucler sur le tableau et repeter un 
-     element du dom autant de fois que d'entrée dans le tableau -->
+<!-- entre crochet le mot clé style + un point et une propriété css
+     Je peux ainsi lié cette propriété à la classe et déclaré la valeur dedans    -->
 
-<p  *ngFor="let fruit of fruits">
-    {{ fruit }}
-</p>
+<p [style.color]="couleur">style.color et couleur en variable (propriété) dans la classe</p>
 
-<p class="font-weight-bold">Afficher l'index</p>
+<!-- la méthode me retourne une couleur -->
 
-<!-- Je peux déclarer une deuxieme variable index pour l'afficher ou l'utiliser -->
-<p class="card col-2 text-center shadow" *ngFor="let fruit of fruits; let i = index ">
-    {{ i }} - {{ fruit }}
-</p>
+<p [style.color]="getColor()">style.color et couleur en méthode dans la classe</p>
 
-<p class="font-weight-bold">Jouer avec l'index, ngFor et ngIf</p>
+<!-- Ici j'utilise un ternaire directement -->
 
-<p class="card col-3 text-center shadow" *ngFor="let fruit of fruits; let i = index ">
-    
-    <span *ngIf=" i %2 == 0"> {{fruit}} est un Fizz </span>
-    <span *ngIf=" i %2 == 1"> {{fruit}} est une Bouze</span>
-</p>
+<p [style.background-color]="flag ? colorA : colorB">Je peux utilisé toute propriété et statement Typescript valide, ici un ternaire</p>
