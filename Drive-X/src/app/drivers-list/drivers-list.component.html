@@ -4,10 +4,16 @@
 
 <p class="h3 my-3">Directive structurelle</p>
 
-<p class="font-weight-bold">Exemple 1</p>
+<p class="font-weight-bold">Exemple 2</p>
 
 
-<!-- J'utilise la variable pour afficher ou non des elements 
-     Modifiant ainsi la structure du dom  -->
-<p *ngIf="isOnline">Bienvenue dans la matrice !</p>
+<!-- Je réagis en modifiant la structure du dom
+     selon la donnée reçu ou non par une eventuelle bdd   -->
+
+<p>Titre: {{book.title}}</p>
+<p>Prix: 
+    <span *ngIf="book.price">{{book.price}} &euro;</span>
+    <span *ngIf="book.price == null" >Non communiqué</span>
+    
+</p>
 

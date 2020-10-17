@@ -8,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class DriversListComponent implements OnInit {
   
 
-  // Je déclare une variable de type booléen 
-  // Que j'utilise dans le template pour afficher ou non un element html
-  isOnline:boolean = true;
+  // Je crée un objet et je modifie le prix ou le rend null pour
+  // simuler une réponse null de la bdd afin que le template s'adapate
+  // grace à la directive structurelle ngIf utilisée
+  
+  book:any = {
+    title: "Le rouge et le noir",
+    price: 12
+  }
+
 
   constructor() { }
 
