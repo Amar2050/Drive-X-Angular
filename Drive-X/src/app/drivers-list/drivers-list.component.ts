@@ -7,21 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DriversListComponent implements OnInit {
   
-  // Je déclare une variable pour l'utilisé avec la directive d'attribut 
-  // style.propriete
-  couleur:string = "blue";
+ // Je définis une marge
+  uneMarge:string = "-110px";
 
-  // Je peux aussi utilisé une méthode avec ma directive d'attribut
+  // NgStyle me permet d'utiliser plusieurs variables ou méthodes pour un seul element du dom
   getColor(){
     return "aqua";
   }
 
-  // Je déclare un booléen servant de déclencheur
-  // On peut imaginer un bouton pour un mode nuit
-  flag:boolean = true;
 
-  colorA:string = "green";
-  colorB:string = "grey";
 
   constructor() { }
 

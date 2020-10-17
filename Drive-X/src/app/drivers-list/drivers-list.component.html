@@ -2,19 +2,14 @@
     Nos Pilotes
 </h1>
 
-<p class="h3 my-3">Directive Attribut - [style.propriété] & [ngStyle]</p>
+<p class="h3 my-3">Directive Attribut - [ngStyle]</p>
 
 <p class="font-weight-bold">Exemple 1</p>
 
-<!-- entre crochet le mot clé style + un point et une propriété css
-     Je peux ainsi lié cette propriété à la classe et déclaré la valeur dedans    -->
+<!-- ngStyle prend en parametre un objet et permet d'appliquer plusieurs propriété css en meme temps   -->
 
-<p [style.color]="couleur">style.color et couleur en variable (propriété) dans la classe</p>
+<p [ngStyle]="{color:'gold',margin:'30px',padding:'50px'}">ngStyle avec plusieurs propriétés css en dur !</p>
 
-<!-- la méthode me retourne une couleur -->
+<p [ngStyle]="{color:getColor(),margin:uneMarge,padding:'50px'}">NgStyle plusieurs propriété css dynamiques depuis la class</p>
 
-<p [style.color]="getColor()">style.color et couleur en méthode dans la classe</p>
 
-<!-- Ici j'utilise un ternaire directement -->
-
-<p [style.background-color]="flag ? colorA : colorB">Je peux utilisé toute propriété et statement Typescript valide, ici un ternaire</p>
