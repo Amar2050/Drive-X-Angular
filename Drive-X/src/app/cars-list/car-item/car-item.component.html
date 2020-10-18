@@ -5,11 +5,21 @@
     <div class="card-body">
         <img [src]="car.coverImage" class="img-fluid" alt="photo {{car.name}}">
         <hr>
-        <p>Origine: {{car.pays | uppercase }} <span *ngIf="car.pays == null ">NC</span></p>
-        <p>Puissance: {{car.power}} CH</p>
-        <p>0 à 100 km/h: {{car.perf}} <span *ngIf="car.perf == null ">NC</span> sec </p>
-        <p>{{bookingMessage}}</p>
-        <button class="btn btn-primary" (click)="onBooking()" [disabled]="isBooked">Réserver</button>
+        <p>Origine: {{car.pays | uppercase }} 
+            <span *ngIf="car.pays == null">NC</span>
+        </p>
+
+        <p>Puissance: 
+            <span [ngClass]="{'badge':true,
+                              'badge-info': car.power < 1000,
+                              'badge-warning': car.power >= 1000}">{{car.power}} CH</span>
+        </p>
+
+        <p>0 à 100 km/h: {{car.perf}} <span *ngIf="car.perf == null">NC</span> sec </p>
+
+        <p [ngClass]="{'text-success':isBooked}">{{bookingMessage}}</p>
+        
+        <button class="btn btn-primary " (click)="onBooking()" [disabled]="isBooked">Réserver</button>
     </div>
 </div>
 <hr>
