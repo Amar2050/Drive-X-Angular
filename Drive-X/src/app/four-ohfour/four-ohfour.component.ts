@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-four-ohfour',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FourOhfourComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+
+    setTimeout( ()=>  {
+      this.router.navigate(['/']);
+    }, 4000);
   }
 
 }
