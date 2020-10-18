@@ -6,6 +6,8 @@ export class BananeService {
     
     fruit:string = "banane";
 
+    prix:number = 10;
+    
     constructor(){}
     
     getFruit(){

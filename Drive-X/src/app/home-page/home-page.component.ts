@@ -11,11 +11,13 @@ export class HomePageComponent implements OnInit {
 
   title = 'Drive-X';
 
+  prixBananeResto = this.resto.getPrice();
+
   constructor(private banane:BananeService, private resto:RestaurantService) { 
     
-    banane.getFruit();
+    this.banane.getFruit();
     
-    console.log("Le nom du restaurant est " + this.resto.name);
+    console.log("Le nom du restaurant est " + this.prixBananeResto);
     
   }
 
