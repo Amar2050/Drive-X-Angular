@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { BananeService } from '../services/banane.service';
-import { RestaurantService } from '../services/restaurant.service';
 
 @Component({
   selector: 'app-home-page',
