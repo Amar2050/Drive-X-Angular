@@ -7,6 +7,7 @@ registerLocaleData(localeFr, 'fr');
 
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
+import { DataService } from './services/data.service';
 
 
 import { AppComponent } from './app.component';
@@ -17,6 +18,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { FourOhfourComponent } from './four-ohfour/four-ohfour.component';
 import { CarItemComponent } from './cars-list/car-item/car-item.component';
 import { DriverItemComponent } from './drivers-list/driver-item/driver-item.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { DriverItemComponent } from './drivers-list/driver-item/driver-item.comp
     HomePageComponent,
     FourOhfourComponent,
     CarItemComponent,
-    DriverItemComponent
+    DriverItemComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,9 @@ import { DriverItemComponent } from './drivers-list/driver-item/driver-item.comp
     FormsModule
   ],
   providers: [
-    { provide: LOCALE_ID, useValue: "fr-FR" }
+    { provide: LOCALE_ID, useValue: "fr-FR" },
+    DataService
+    
     ],
   bootstrap: [AppComponent]
 })
