@@ -10,12 +10,13 @@
         </p>
 
         <p>Puissance: 
-            <span [ngClass]="{'badge':true,
+            <span *ngIf="car.power" [ngClass]="{'badge':true,
                               'badge-info': car.power < 1000,
                               'badge-warning': car.power >= 1000}">{{car.power}} CH</span>
+                              <span *ngIf="car.power == null">NC</span>
         </p>
 
-        <p>0 à 100 km/h: {{car.perf}} <span *ngIf="car.perf == null">NC</span> sec </p>
+        <p>0 à 100 km/h:  <span *ngIf="car.perf == null">NC</span> <span *ngIf="car.perf "> {{car.perf}} sec</span>  </p>
 
         <p [ngClass]="{'text-success':isBooked}">{{bookingMessage}}</p>
         

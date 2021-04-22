@@ -6,7 +6,8 @@ import localeFr from '@angular/common/locales/fr';
 registerLocaleData(localeFr, 'fr');
 
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,  } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { DataService } from './services/data.service';
 
 
@@ -19,6 +20,8 @@ import { FourOhfourComponent } from './four-ohfour/four-ohfour.component';
 import { CarItemComponent } from './cars-list/car-item/car-item.component';
 import { DriverItemComponent } from './drivers-list/driver-item/driver-item.component';
 import { FooterComponent } from './footer/footer.component';
+import { NewCarComponent } from './cars-list/new-car/new-car.component';
+import { NewDriverComponent } from './drivers-list/new-driver/new-driver.component';
 
 @NgModule({
   declarations: [
@@ -30,12 +33,15 @@ import { FooterComponent } from './footer/footer.component';
     FourOhfourComponent,
     CarItemComponent,
     DriverItemComponent,
-    FooterComponent
+    FooterComponent,
+    NewCarComponent,
+    NewDriverComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: "fr-FR" },

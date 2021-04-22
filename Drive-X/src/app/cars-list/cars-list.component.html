@@ -2,7 +2,9 @@
     Nos Vehicules
 </h1>
 
-<div class="badge badge-dark my-5">Données mise à jour: {{ carUpdate | date:"dd MMMM yyyy H:mm" | uppercase }}</div>
+<div class="badge badge-dark my-5 p-2">Données mise à jour: {{ carUpdate | date:"dd MMMM yyyy H:mm" | uppercase }}</div>
+
+<a  class="badge badge-success mx-5 p-2" routerLink="/new-car">+ Ajouter une voiture</a>
 
 <div class="card-deck  justify-content-center">
     <app-car-item  *ngFor="let oneCar of cars" [car]="oneCar" ></app-car-item>

@@ -1,0 +1,53 @@
+<h1 class="my-5">
+    Créer un Pilote
+</h1>
+
+<div class="col-6 border shadow  my-5 p-5">
+    <form (ngSubmit)="onSubmit()" [formGroup]="driverForm">
+        <div class="form-group">
+            <label for="name">Nom complet du Pilote
+
+                <span class="text-danger" *ngIf="driverForm.get('fullName').errors && 
+                    driverForm.get('fullName').hasError('required')">
+                    *
+                </span>
+
+            </label>
+            <input type="text" class="form-control" id="name" formControlName="fullName" #fullName>
+
+            <small class="badge badge-danger my-2" *ngIf="driverForm.get('fullName').invalid && 
+                driverForm.get('fullName').errors && 
+                (driverForm.get('fullName').dirty || driverForm.get('fullName').touched)">
+                Ce champs est requis
+            </small>
+
+
+        </div>
+        <div class="form-group">
+            <label for="pays">Pays d'origine</label>
+            <input type="text" class="form-control" id="pays" formControlName="pays">
+
+            <small class="badge badge-danger my-2" *ngIf="driverForm.get('pays').hasError('minlength')">
+                Minimum {{driverForm.get('pays').errors.minlength.requiredLength}} caractères requis.
+            </small>
+
+        </div>
+        <div class="form-group">
+            <label for="coverImage">Photo du pilote (url)</label>
+            <input type="text" class="form-control" id="coverImage" formControlName="coverImage">
+
+            <small class="badge badge-danger my-2" 
+                *ngIf="driverForm.controls['coverImage'].invalid">
+                Photo requis
+            </small>
+
+        </div>
+        <div class="form-group">
+            <label for="category">Discipline</label>
+            <input type="text" class="form-control" id="category" formControlName="category">
+        </div>
+        <button type="submit" class="btn btn-success my-5" [disabled]="driverForm.invalid">
+            Enregister
+        </button>
+    </form>
+</div>

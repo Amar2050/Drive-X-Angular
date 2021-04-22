@@ -1,8 +1,14 @@
 import { Injectable } from '@angular/core';
+import { DriversListComponent } from '../drivers-list/drivers-list.component';
+import { Car } from '../models/Car';
+import { Driver } from '../models/Driver';
 
 @Injectable()
 export class DataService {
 
+  voiture: Car = new Car("peugeot L750 r","France","https://www.lemagautoprestige.com/peugeot-l750-r-hybrid-vision-gran-turismo-gt-sport/4420/peugeot-l750-r-hybrid-vision-gt-sport/");
+
+  pilote: Driver = new Driver("mister bean","angleterre","https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/RowanAtkinsonMar07.jpg/1024px-RowanAtkinsonMar07.jpg" , "formule 1");
 
   drivers: any = [
     {
@@ -61,9 +67,10 @@ export class DataService {
       category: "drag",
       likeIts: 0
     },
+    this.pilote
   ];
 
-  cars: any = [
+  cars: Car[] = [
     {
       name: "pagani huayra",
       pays: "italie",
@@ -106,11 +113,18 @@ export class DataService {
       coverImage:"./assets/img/cars/ferrari.jpg",
       power: 1000,
       perf: 2.5
-    }
+    },
+    this.voiture
   ];
 
   constructor() { }
 
+  addCar(car:Car){
+    this.cars.push(car);
+  }
+  addDriver(driver:Driver){
+    this.drivers.push(driver);
+  }
   
   getAllDrivers(){
     return this.drivers;
@@ -135,7 +149,7 @@ export class DataService {
 
     allCars.sort( (carB, carA) => { return carA.power - carB.power } );
 
-    return allCars.slice(allCars.lenght,  nb );
+    return allCars.slice(allCars.length,  nb );
 
   }
 }
