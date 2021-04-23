@@ -66,8 +66,7 @@ export class DataService {
       coverImage: "./assets/img/drivers/ericaenders.jpg",
       category: "drag",
       likeIts: 0
-    },
-    this.pilote
+    }
   ];
 
   cars: Car[] = [
@@ -117,6 +116,8 @@ export class DataService {
     this.voiture
   ];
 
+  categories: string[] = ["formule 1","drag","rallye","gymkhana","nascar"];
+
   constructor() { }
 
   addCar(car:Car){
@@ -126,6 +127,10 @@ export class DataService {
     this.drivers.push(driver);
   }
   
+  getAllCategories(){
+    return this.categories;
+  }
+
   getAllDrivers(){
     return this.drivers;
   }
