@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Car } from '../models/Car';
 
 @Injectable()
 export class DataService {
@@ -63,7 +64,7 @@ export class DataService {
     },
   ];
 
-  cars: any = [
+  cars: Car[] = [
     {
       name: "pagani huayra",
       pays: "italie",
@@ -125,7 +126,7 @@ export class DataService {
 
     allDrivers.sort( (b, a) => { return a.likeIts - b.likeIts } );
 
-    return allDrivers.slice(allDrivers.lenght,  nb );
+    return allDrivers.slice(allDrivers.length,  nb );
 
   }
 
@@ -135,7 +136,7 @@ export class DataService {
 
     allCars.sort( (carB, carA) => { return carA.power - carB.power } );
 
-    return allCars.slice(allCars.lenght,  nb );
+    return allCars.slice(allCars.length,  nb );
 
   }
 }

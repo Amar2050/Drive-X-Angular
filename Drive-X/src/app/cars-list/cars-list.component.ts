@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../services/data.service';
+import { Car } from '../models/Car';
 
 @Component({
   selector: 'app-cars-list',
@@ -10,7 +11,7 @@ export class CarsListComponent implements OnInit {
 
   carUpdate:any;
 
-  cars: any;
+  cars: Car[];
   
   constructor(private data:DataService) { 
     this.cars = this.data.getAllCars();
