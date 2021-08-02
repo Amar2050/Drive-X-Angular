@@ -12,9 +12,12 @@ export class CarsListComponent implements OnInit {
   carUpdate:any;
 
   cars: Car[];
+
+  voiture: Car = new Car("peugeot L750 r" , "France" , "https://www.largus.fr/images/images/peugeot-l750-r-hybrid-gran-turismo-7-.jpg" , 750 , 2.4);
   
   constructor(private data:DataService) { 
     this.cars = this.data.getAllCars();
+    this.data.cars.push(this.voiture);
   }
 
   ngOnInit(): void {
