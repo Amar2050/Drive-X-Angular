@@ -126,7 +126,7 @@ export class DataService {
 
     allDrivers.sort( (b, a) => { return a.likeIts - b.likeIts } );
 
-    return allDrivers.slice(allDrivers.length,  nb );
+    return allDrivers.slice(allDrivers.lenght,  nb );
 
   }
 
