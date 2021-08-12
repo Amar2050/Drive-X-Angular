@@ -144,7 +144,7 @@ export class DataService {
 
     allDrivers.sort( (b, a) => { return a.likeIts - b.likeIts } );
 
-    return allDrivers.slice(allDrivers.lenght,  nb );
+    return allDrivers.slice(0,  nb );
 
   }
 
@@ -154,7 +154,7 @@ export class DataService {
 
     allCars.sort( (carB, carA) => { return carA.power - carB.power } );
 
-    return allCars.slice(allCars.length,  nb );
+    return allCars.slice(0,  nb );
 
   }
 }
